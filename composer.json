@@ -1,0 +1,17 @@
+{
+    "name": "aaronjan/kobe",
+    "description": "Kobe is a Swagger definition writing tool for PHP, it can be used with framework like Laravel or just native PHP.",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "AaronJan",
+            "email": "aaronjan@qq.com"
+        }
+    ],
+    "require": {
+        "symfony/finder": "2.7.* || ~3.2"
+    },
+    "suggest": {
+        "zircote/swagger-php": "Kobe only knows the definitions of Swagger."
+    }
+}
