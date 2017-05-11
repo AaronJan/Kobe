@@ -11,6 +11,11 @@
     "require": {
         "symfony/finder": "2.7.* || ~3.2"
     },
+    "autoload": {
+        "psr-4": {
+            "Kobe\\": "src/Kobe/"
+        }
+    },
     "suggest": {
         "zircote/swagger-php": "Kobe only knows the definitions of Swagger."
     }
