@@ -17,6 +17,11 @@ trait WithProperty
     protected $required = [];
 
     /**
+     * @var bool
+     */
+    protected $additionalProperties = true;
+
+    /**
      * @param string                         $name
      * @param \Kobe\Contracts\Understandable $value
      * @return $this
@@ -83,6 +88,25 @@ trait WithProperty
     public function getRequired()
     {
         return $this->required;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getAdditionalProperties()
+    {
+        return $this->additionalProperties;
+    }
+
+    /**
+     * @param $additionalProperties
+     * @return $this
+     */
+    public function setAdditionalProperties($additionalProperties)
+    {
+        $this->additionalProperties = $additionalProperties;
+
+        return $this;
     }
 
 }
