@@ -33,6 +33,7 @@ class Loader
                 StringHelper::trimWhenStartsWith($filePath->getRealPath(), $directory),
                 DIRECTORY_SEPARATOR
             );
+            $class = str_replace(DIRECTORY_SEPARATOR, '\\', $class);
 
             return $namespace . static::trimFileSuffix($class);
         }, $filePaths);
