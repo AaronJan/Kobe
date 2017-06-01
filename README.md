@@ -512,6 +512,10 @@ This is the result:
 
 #### getRequired()
 
+### setAdditionalProperties($additionalProperties)
+
+### getAdditionalProperties()
+
 #### setItems(\Kobe\Schemas\Items $items)
 
 #### setReferenceAsItems(\Kobe\Schemas\Reference $reference)

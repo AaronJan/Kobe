@@ -68,6 +68,15 @@ class Schema implements Understandable, Extendable, Inheritable, SchemaContract
             $valueMap['properties'] = $this->translateAll($properties);
         }
 
+        $required = $this->getRequired();
+        if (!empty($required)) {
+            $valueMap['required'] = $required;
+        }
+
+        if ($this->additionalProperties === false) {
+            $valueMap['additionalProperties'] = false;
+        }
+
         return $this->mergeIntoArrayIfNotNull([], $valueMap);
     }
 
