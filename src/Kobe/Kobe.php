@@ -9,7 +9,7 @@ use Kobe\Contracts\Schema\Definition as DefinitionContract;
 
 use Kobe\Schemas\Items;
 use Kobe\Schemas\Reference;
-use Kobe\Schemas\Schema;
+use Kobe\Schemas\Schema as KobeSchema;
 use Kobe\Schemas\TempDefinition;
 
 /**
@@ -49,7 +49,7 @@ class Kobe
 
     /**
      * @param $class
-     * @return Object|Schema|mixed
+     * @return Object|KobeSchema|mixed
      */
     static public function getInstance($class)
     {
@@ -65,7 +65,7 @@ class Kobe
      */
     static public function makeSchema()
     {
-        return new Schema();
+        return new KobeSchema();
     }
 
     /**
@@ -81,7 +81,7 @@ class Kobe
      */
     static public function makeInteger()
     {
-        return (new Schema())
+        return (new KobeSchema())
             ->asInteger();
     }
 
@@ -90,7 +90,7 @@ class Kobe
      */
     static public function makeLong()
     {
-        return (new Schema())
+        return (new KobeSchema())
             ->asLong();
     }
 
@@ -99,7 +99,7 @@ class Kobe
      */
     static public function makeFloat()
     {
-        return (new Schema())
+        return (new KobeSchema())
             ->asFloat();
     }
 
@@ -108,7 +108,7 @@ class Kobe
      */
     static public function makeDouble()
     {
-        return (new Schema())
+        return (new KobeSchema())
             ->asDouble();
     }
 
@@ -117,7 +117,7 @@ class Kobe
      */
     static public function makeString()
     {
-        return (new Schema())
+        return (new KobeSchema())
             ->asString();
     }
 
@@ -126,7 +126,7 @@ class Kobe
      */
     static public function makeByte()
     {
-        return (new Schema())
+        return (new KobeSchema())
             ->asByte();
     }
 
@@ -135,7 +135,7 @@ class Kobe
      */
     static public function makeBinary()
     {
-        return (new Schema())
+        return (new KobeSchema())
             ->asBinary();
     }
 
@@ -144,7 +144,7 @@ class Kobe
      */
     static public function makeBoolean()
     {
-        return (new Schema())
+        return (new KobeSchema())
             ->asBoolean();
     }
 
@@ -153,7 +153,7 @@ class Kobe
      */
     static public function makeDate()
     {
-        return (new Schema())
+        return (new KobeSchema())
             ->asDate();
     }
 
@@ -162,7 +162,7 @@ class Kobe
      */
     static public function makeDateTime()
     {
-        return (new Schema())
+        return (new KobeSchema())
             ->asDateTime();
     }
 
@@ -171,7 +171,7 @@ class Kobe
      */
     static public function makePassword()
     {
-        return (new Schema())
+        return (new KobeSchema())
             ->asPassword();
     }
 
@@ -180,7 +180,7 @@ class Kobe
      */
     static public function makeObject()
     {
-        return (new Schema())
+        return (new KobeSchema())
             ->asObject();
     }
 
@@ -189,7 +189,7 @@ class Kobe
      */
     static public function makeArray()
     {
-        return (new Schema())
+        return (new KobeSchema())
             ->asArray();
     }
 
