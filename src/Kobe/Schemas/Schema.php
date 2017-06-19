@@ -62,6 +62,11 @@ class Schema implements Understandable, Extendable, Inheritable, SchemaContract
             $valueMap['allOf'] = $this->translateAll($allOf);
         }
 
+        $items = $this->getItems();
+        if (! empty($items)) {
+            $valueMap['items'] = $items->toArray();
+        }
+
         $properties = $this->getProperties();
         if (! empty($properties)) {
             $valueMap['properties'] = $this->translateAll($properties);

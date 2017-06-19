@@ -2,11 +2,11 @@
 
 namespace Kobe\Schemas;
 
-use Kobe\Contracts\Schema\Schema;
+use Kobe\Contracts\Schema\Schema as SchemaContract;
 use Kobe\Contracts\Understandable;
 use Kobe\Schemas\Traits;
 
-class Items implements Understandable, Schema
+class Items implements Understandable, SchemaContract
 {
     use Traits\WithTypeAndFormat,
         Traits\WithDefault,
