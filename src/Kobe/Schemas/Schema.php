@@ -54,7 +54,6 @@ class Schema implements Understandable, Extendable, Inheritable, SchemaContract
             'description' => $this->getDescription(),
             'type'        => $this->getType(),
             'format'      => $this->getFormat(),
-            'items'       => $this->getItems(),
             'example'     => $this->getExample(),
         ];
 
@@ -71,6 +70,11 @@ class Schema implements Understandable, Extendable, Inheritable, SchemaContract
         $properties = $this->getProperties();
         if (! empty($properties)) {
             $valueMap['properties'] = $this->translateAll($properties);
+        }
+
+        $items = $this->getItems();
+        if (!empty($items)) {
+            $valueMap['items'] = $items->toArray();
         }
 
         $required = $this->getRequired();
