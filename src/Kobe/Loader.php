@@ -24,7 +24,7 @@ class Loader
         $directory = realpath($directory);
 
         $filePaths = iterator_to_array(
-            Finder::create()->files()->depth("< $depth")->ignoreDotFiles(true)->in($directory),
+            Finder::create()->files()->name('*.php')->depth("< $depth")->ignoreDotFiles(true)->in($directory),
             false
         );
 
