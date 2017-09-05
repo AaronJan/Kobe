@@ -7,6 +7,11 @@ Kobe can only generate [definitions part](http://swagger.io/specification/#defin
 Why named "Kobe"? Well, I did a little research, according to the [internet](http://www.bleacherreport.com/articles/924693-10-nba-players-with-most-swagger), **Kobe Bryant** has the most swagger, so I think Kobe knows the difinition of `Swagger`.
 
 
+## Notice
+
+If you use `swagger-php` version `2.0.11` got schema not found error, see [here](https://github.com/AaronJan/Kobe/issues/3).
+
+
 ## Introduction
 
 You must knew [zircote/swagger-php](https://github.com/zircote/swagger-php). If you used it before, you may complain these things like me:
